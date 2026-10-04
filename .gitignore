@@ -1,0 +1,23 @@
+# Python environments
+.venv/
+.venv-build/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# PyInstaller build: build.bat creates all of it again
+build/
+dist/
+*.spec
+icon.ico
+
+# User data: wallets.txt holds private keys, settings.txt may hold RPC URLs with API keys
+settings.txt
+settings.txt.tmp
+wallets.txt
+.build-backup/
+selfcheck.log
+
+# Local working files: the internal specification and design snapshots (tools/render_ui.py creates them again)
+ТЗ.md
+design/

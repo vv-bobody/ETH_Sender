@@ -1,0 +1,4 @@
+# UI
+PySide6-Essentials>=6.8
+# Networks
+web3>=7,<8

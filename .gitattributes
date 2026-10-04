@@ -1,0 +1,5 @@
+* text=auto
+# cmd.exe breaks on bat files with LF line endings
+*.bat text eol=crlf
+*.png binary
+*.ico binary
