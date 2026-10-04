@@ -10,6 +10,26 @@ A Windows desktop program that sends the native coin (ETH, BNB, AVAX) or an ERC-
 - Random or file order, random delays between wallets, a Stop button.
 - English and Russian interface, dark and light themes.
 
+## Screenshots
+
+The screenshots show the program with demo data (`main.py --demo`).
+
+Wallets and balances are loaded, the wallets to send from are checked:
+
+![Main window: settings on the left, the wallet table with balances and the log](docs/screenshots/ready.png)
+
+Sending in progress — statuses, attempts, transaction links and the log:
+
+![Main window during sending: a status and a transaction link for every wallet](docs/screenshots/running.png)
+
+The confirmation window before the start:
+
+![Confirmation window with the network, token, amount, wallets, gas and delays](docs/screenshots/confirm.png)
+
+The light theme:
+
+![Main window in the light theme](docs/screenshots/ready-light.png)
+
 ## Requirements
 
 - Windows 10 or 11, x64.
