@@ -33,15 +33,21 @@ The light theme:
 ## Requirements
 
 - Windows 10 or 11, x64.
-- Python 3.13 — only to build the program or to run it from sources. The built `ETH_Sender.exe` does not need Python.
+- Python 3.13 — only to build the program or to run it from sources. The ready-made `ETH_Sender.exe` does not need Python.
 
-## Getting started
+## Download
 
-Run `build.bat`. It builds `dist\ETH_Sender\ETH_Sender.exe` and creates the "ETH Sender" desktop shortcut. See [Building](#building) for details and [Development](#development) for running from sources.
+Download `ETH_Sender-<version>-win64.zip` from the [Releases](https://github.com/vv-bobody/ETH_Sender/releases/latest) page, unpack it to any folder and run `ETH_Sender.exe`.
+
+- The file is not signed with a code-signing certificate, so Windows SmartScreen may show "Windows protected your PC": click **More info → Run anyway**. Some antivirus programs flag any program packed with PyInstaller.
+- The release page lists the SHA-256 of the archive. Check it before unpacking: `certutil -hashfile ETH_Sender-<version>-win64.zip SHA256`.
+- To update, unpack the new version and copy your `settings.txt` and `wallets.txt` into its folder.
+
+The program works with private keys, so you may prefer not to run a ready-made file. In that case build it yourself: run `build.bat`, which builds `dist\ETH_Sender\ETH_Sender.exe` and creates the "ETH Sender" desktop shortcut. See [Building](#building) for details and [Development](#development) for running from sources.
 
 ## How to use
 
-1. Start the program with the "ETH Sender" desktop shortcut. On the first start `settings.txt` and `wallets.txt` appear next to the program.
+1. Start `ETH_Sender.exe` (or the "ETH Sender" desktop shortcut, if you built the program yourself). On the first start `settings.txt` and `wallets.txt` appear next to the program.
 2. Put the wallets into `wallets.txt`, one per line: `name,private key,recipient address`, or without a name — `private key,recipient address`. Formats can be mixed.
 3. In the window, pick the network, the token, the amount and the delays, then click Apply: the program saves the settings, checks the RPC and loads the balances. The Token list has the native coin, the network's ready-made stablecoins (USDT, USDC and their variants such as USDT0 or the bridged USDC.e; USDG in Robinhood) and a custom ERC-20 by its contract address.
 4. Check the wallets, click Start and confirm. If an old bridged token is selected (USDC.e, USDbC, USDT.e), the confirmation window warns that exchanges often credit only the native USDC and USDT.

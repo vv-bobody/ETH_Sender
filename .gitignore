@@ -21,3 +21,6 @@ selfcheck.log
 # Local working files: the internal specification and design snapshots (tools/render_ui.py creates them again)
 ТЗ.md
 design/
+
+# Release archives: they are published on the GitHub Releases page, not in the repository
+release/
